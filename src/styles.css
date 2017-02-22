@@ -1,0 +1,43 @@
+
+@font-face{
+
+  font-family: myfont2;
+  src: url(font/BebasNeue.otf);
+}
+
+@font-face{
+
+  font-family: myfont;
+  src: url(font/Znikomit.otf);
+}
+
+.navbar-default .navbar-nav>li>a {
+  font-family: myfont2;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  padding-left: 20px;
+}
+.mynav{
+  margin-left: 38%!important;
+}
+.logo{
+  font-family: myfont2;
+  height:50px;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 7px;
+  padding-left: 67px!important;
+  opacity: 0.5;
+  background-color:#000;
+  color:#fff;
+}
+
+.shadow {
+  webkit-box-shadow:  1px 1px  6px #A8A8A8;
+  moz-box-shadow:     1px 1px  6px #A8A8A8;
+  box-shadow:         1px 1px  6px #A8A8A8;
+}
+
+
+

@@ -1,0 +1,45 @@
+
+
+<section id="details">
+  <div class="container-fluid" style="padding-bottom: 50px;">
+
+      <div class="row" *ngFor="let i of storedData">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6 shadow outer">
+
+          <div class="row">
+
+            <div class="col-md-12 pri vcenter common">
+              {{i.priority}}
+            </div>
+
+            <div class="col-md-12 tit common">
+              {{i.title}}
+            </div>
+
+            <div class="col-md-12 des common">
+              {{i.description}}
+            </div>
+
+            <div class="col-md-12 dat common">
+              {{"Created at : " + i.date}}
+            </div>
+            <div class="col-md-12  common">
+              <input type="button" (click)="editTask(i)" value="Edit" class="btn btn-primary customCommon"
+                     style="padding:6px 15px;">
+              <input type="button" (click)="taskDone(i)" value="Done" class="btn btn-primary customCommon"
+                     style="background-color: #F08080!important;">
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+
+  </div>
+</section>
+
+

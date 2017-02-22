@@ -1,0 +1,49 @@
+.outer {
+  border: 1px solid #dcdcdc;
+  font-family: myfont;
+  color: #204d74;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 15px 0px;
+}
+
+.pri {
+
+  font-size: 35px;
+  color: #CD5C5C;
+}
+
+.tit {
+  font-size: 25px;
+  color: #BB8FCE;
+}
+
+.des {
+  font-size: 15px;
+}
+
+.dat {
+
+  font-size: 13px;
+  color: #16A085;
+
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.common {
+  border-bottom: 1px solid #dcdcdc;
+  padding: 20px 0px;
+}
+
+.customCommon {
+  background-color: #a8a8a8 !important;
+  font-family: Arial;
+  border: none;
+}
+

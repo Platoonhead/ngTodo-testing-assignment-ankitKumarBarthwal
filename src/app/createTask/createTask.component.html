@@ -1,0 +1,55 @@
+<section id="details">
+  <div class="container">
+
+    <div class="row">
+      <div class="alert alert-success alert-dismissable" *ngIf="isSucess"> <!--  -->
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        Event has been successfully created.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="alert alert-success alert-dismissable" *ngIf="isUpdated"> <!--  -->
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        Event has been successfully Updated.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-6 enclosed shadow">
+        <form #formVariable='ngForm' (ngSubmit)="createTask(formVariable.value)">
+          <input [(ngModel)]="date" type="date" class="fields" required #spy ngModel name="date">
+          <input [(ngModel)]="title" placeholder="Title" type="text" class="fields" required #spy2 ngModel name="title">
+          <textarea [(ngModel)]="des" placeholder="Description" class="field" rows="3" required #spy3 ngModel
+                    name="description"></textarea>
+
+          <div class="row">
+            <div class="col-md-3">
+              <input type="text" class="fields" value="Priority" style="border: none;color: #999"/>
+            </div>
+            <div class="col-md-5">
+              <select required [(ngModel)]="pri" class="fields" style="background-color: #fff;" name="priority" ngModel>
+                <option>high</option>
+                <option>medium</option>
+                <option>low</option>
+              </select>
+            </div>
+            <div class="col-md-4 text-center">
+              <input type="submit" value={{btnName}} class="btn btn-primary">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+
+
+
+
