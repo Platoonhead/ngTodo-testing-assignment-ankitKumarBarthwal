@@ -3,9 +3,10 @@ import {AppService} from "../app.service";
 import {MyEvent} from "../event";
 import {Router} from "@angular/router/";
 @Component({
+  moduleId:module.id,
   selector: 'my-app',
-  templateUrl: './app/show/show.component.html',
-  styleUrls: ['./app/show/show.component.css'],
+  templateUrl: './show.component.html',
+  styleUrls: ['./show.component.css'],
   providers: [AppService]
 })
 export class showComponent implements OnInit {
@@ -19,11 +20,10 @@ export class showComponent implements OnInit {
 
   ngOnInit() {
 
-
     this.service.getItems().subscribe((data: any) => {
         this.storedData = data
       },
-      (err: any) => alert(err), () => {
+      (err: any) =>console.error(err), () => {
       });
 
   }
@@ -39,12 +39,12 @@ export class showComponent implements OnInit {
         this.service.getItems().subscribe((data: any) => {
             this.storedData = data
           },
-          (err: any) => alert(err), () => {
+          (err: any) => console.error(err), () => {
           });
 
 
       },
-      (err: any) => alert(err), () => {
+      (err: any) => console.error(err), () => {
       });
   }
 }

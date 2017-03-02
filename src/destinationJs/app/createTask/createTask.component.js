@@ -37,11 +37,10 @@ var createTaskComponent = (function () {
                     _this.idToUpdate = paraEvent.id;
                     _this.btnName = "Save";
                     _this.isSave = true;
-                }, function (err) { return alert(err); }, function () {
+                }, function (err) { return console.error(err); }, function () {
                 });
             }
         });
-        this.pri = "jjjjjj";
     };
     createTaskComponent.prototype.createTask = function (form) {
         var _this = this;
@@ -80,9 +79,10 @@ var createTaskComponent = (function () {
     };
     createTaskComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'my-app',
-            templateUrl: './app/createTask/createTask.component.html',
-            styleUrls: ['./app/createTask/createTask.component.css'],
+            templateUrl: './createTask.component.html',
+            styleUrls: ['./createTask.component.css'],
             providers: [app_service_1.AppService]
         }), 
         __metadata('design:paramtypes', [router_1.Router, router_1.ActivatedRoute, app_service_1.AppService])

@@ -20,7 +20,7 @@ var showComponent = (function () {
         var _this = this;
         this.service.getItems().subscribe(function (data) {
             _this.storedData = data;
-        }, function (err) { return alert(err); }, function () {
+        }, function (err) { return console.error(err); }, function () {
         });
     };
     showComponent.prototype.editTask = function (event) {
@@ -31,16 +31,17 @@ var showComponent = (function () {
         this.service.del(item._id).subscribe(function (data) {
             _this.service.getItems().subscribe(function (data) {
                 _this.storedData = data;
-            }, function (err) { return alert(err); }, function () {
+            }, function (err) { return console.error(err); }, function () {
             });
-        }, function (err) { return alert(err); }, function () {
+        }, function (err) { return console.error(err); }, function () {
         });
     };
     showComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'my-app',
-            templateUrl: './app/show/show.component.html',
-            styleUrls: ['./app/show/show.component.css'],
+            templateUrl: './show.component.html',
+            styleUrls: ['./show.component.css'],
             providers: [app_service_1.AppService]
         }), 
         __metadata('design:paramtypes', [app_service_1.AppService, _1.Router])

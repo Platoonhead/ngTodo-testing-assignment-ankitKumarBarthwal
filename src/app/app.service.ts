@@ -52,24 +52,8 @@ export class AppService {
     return Observable.throw(new Error(errMsg));
   }
 
-  /* updateItems(id: number, ti: string, da: Date, des: string, pr: number): boolean {
 
-
-   for (let i = 0; i < AppService.allevents.length; i++) {
-
-   if (AppService.allevents[i].id == id) {
-   AppService.allevents[i].title = ti;
-   AppService.allevents[i].description = des;
-   AppService.allevents[i].date = da;
-   AppService.allevents[i].priority = pr;
-   }
-   }
-   return true;
-
-   }*/
-
-
-  getItems() {
+  getItems():Observable<any>{
     let jsonHeader = new Headers({
       'Content-Type': 'application/json'
     });

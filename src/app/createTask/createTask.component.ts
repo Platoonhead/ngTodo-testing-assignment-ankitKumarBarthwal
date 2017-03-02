@@ -1,10 +1,12 @@
 import {Component, OnInit} from "@angular/core";
 import {AppService} from "../app.service";
 import {Router, ActivatedRoute} from "@angular/router";
+import {MyEvent} from "../event";
 @Component({
+  moduleId:module.id,
   selector: 'my-app',
-  templateUrl: './app/createTask/createTask.component.html',
-  styleUrls: ['./app/createTask/createTask.component.css'],
+  templateUrl: './createTask.component.html',
+  styleUrls: ['./createTask.component.css'],
   providers: [AppService]
 })
 export class createTaskComponent implements OnInit {
@@ -19,7 +21,6 @@ export class createTaskComponent implements OnInit {
   isSave: boolean = false;
   temid = 0;
   idToUpdate = "";
-
   constructor(private router: Router, private route: ActivatedRoute, private service: AppService) {
   }
 
@@ -36,7 +37,7 @@ export class createTaskComponent implements OnInit {
             this.btnName = "Save";
             this.isSave = true;
           },
-          (err: any) => alert(err), () => {
+          (err: any) => console.error(err), () => {
           });
 
         //let toEditItem = this.service.getItems().filter(x => x._id == paraEvent.id);
@@ -45,7 +46,6 @@ export class createTaskComponent implements OnInit {
       }
     });
 
-    this.pri = "jjjjjj";
   }
 
   createTask(form: any) {
